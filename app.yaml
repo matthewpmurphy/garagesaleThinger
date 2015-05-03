@@ -1,0 +1,18 @@
+application: 710423697224
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /get-cl-sites
+  script: clGetSites.php
+
+- url: /get-cl-sales
+  script: clGetGarageSales.php
+
+- url: /xml
+  static_dir: xml
+
+- url: .*
+  script: main.php
